@@ -1,0 +1,9 @@
+<template>
+  <div class="form-inline">
+    <div class="form-group">
+      <label for="description">New Item</label>
+      <input id="description" class="form-control" keyup="keyPressed($event)" value.bind="value">
+    </div>
+    <button class="btn btn-primary" type="button" click.delegate="addItem()">Add Item</button>
+  </div>
+</template>
