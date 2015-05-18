@@ -4,10 +4,10 @@ import {todoItems} from 'services/todo-items';
 @inject(todoItems)
 export class TodoList {
   constructor(todoitems) {
-    console.log('me')
-    this.items = todoitems;
+    this.items = todoitems.items;
   }
   setCompleted(item) {
+    console.log('hey', item.completed)
     item.completed = !item.completed;
   }
   completeAll() {

@@ -1,2 +1,3 @@
-var todoItems = [];
-export {todoItems};
+export class todoItems {
+  items = [];
+}

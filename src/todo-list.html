@@ -1,8 +1,8 @@
 <template style="margin-bottom:10px">
   <h1>To Do</h1>
   <div style="padding:5px" repeat.for="item of items">
-      <input type="checkbox" checked.bind="item.completed" click.delegate="$parent.setCompleted(item)">
-      {{item.text}} <a class="glyphicon glyphicon-remove" click.delegate="$parent.removeItem(item)"></a>
+      <i class="fa fa-${item.completed ? 'check-' : ''}square-o" click.delegate="$parent.setCompleted(item)"></i>
+      ${item.text} <a class="glyphicon glyphicon-remove" click.delegate="$parent.removeItem(item)"></a>
   </div>
   <button if.bind="items.length" class="btn btn-xs btn-warning" click.delegate="completeAll()">Complete All</button>
 </template>

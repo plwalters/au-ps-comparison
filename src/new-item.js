@@ -6,7 +6,7 @@ import {todoItems} from 'services/todo-items';
 export class NewItem {
   value;
   constructor(todoitems) {
-    this.items = todoitems;
+    this.items = todoitems.items;
   }
   keyPressed($event) {
     if($event.which === 13) {
@@ -15,7 +15,7 @@ export class NewItem {
   }
   addItem(input) {
     this.items.push({
-      text: input.value,
+      text: this.value,
       completed: false
     })
     this.value = '';
