@@ -1,9 +1,7 @@
-import {inject, customElement} from 'aurelia-framework';
-import {todoItems} from 'services/todo-items';
+import {TodoItems} from 'services/todo-items';
 
-@customElement('new-item')
-@inject(todoItems)
 export class NewItem {
+  static inject = [TodoItems];
   value;
   constructor(todoitems) {
     this.items = todoitems.items;

@@ -1,14 +1,9 @@
-import {inject} from 'aurelia-framework';
-import {todoItems} from 'services/todo-items';
+import {TodoItems} from 'services/todo-items';
 
-@inject(todoItems)
 export class TodoList {
+  static inject = [TodoItems];
   constructor(todoitems) {
     this.items = todoitems.items;
-  }
-  setCompleted(item) {
-    console.log('hey', item.completed)
-    item.completed = !item.completed;
   }
   completeAll() {
     var that = this;

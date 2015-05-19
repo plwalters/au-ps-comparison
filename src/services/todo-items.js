@@ -1,3 +1,3 @@
-export class todoItems {
+export class TodoItems {
   items = [];
 }
