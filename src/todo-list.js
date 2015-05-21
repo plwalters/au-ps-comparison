@@ -6,9 +6,8 @@ export class TodoList {
     this.items = todoitems.items;
   }
   completeAll() {
-    var that = this;
     this.items.forEach(item => {
-      that.setCompleted(item, true);
+      item.completed = true;
     });
   }
   removeItem(item) {
